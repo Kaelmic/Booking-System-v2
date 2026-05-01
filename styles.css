@@ -22,7 +22,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.88);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid #1f1f1f;
   z-index: 1000;
@@ -31,25 +31,30 @@ body {
 .nav-container {
   max-width: 1100px;
   margin: auto;
-  padding: 14px 20px;
+  padding: 10px 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
 }
 
 .logo {
   color: #c89b3c;
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
 }
 
 .nav-btn {
   background: #c89b3c;
   color: #000;
-  padding: 8px 16px;
+  padding: 7px 12px;
   border-radius: 6px;
   text-decoration: none;
-  font-weight: 600;
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .hero {
@@ -335,8 +340,7 @@ body {
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 75vh;
-    padding: 70px 20px;
+    padding-top: 90px;
   }
 
   .services,
@@ -348,6 +352,20 @@ body {
     width: calc(100% - 32px);
     margin: 40px auto;
     padding: 24px;
+  }
+
+  .nav-container {
+    padding: 8px 14px;
+  }
+
+  .logo {
+    font-size: 0.85rem;
+    max-width: 180px;
+  }
+
+  .nav-btn {
+    padding: 6px 10px;
+    font-size: 0.75rem;
   }
 
   .booking h2,
