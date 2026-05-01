@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MC Nathaniel Barbershop | Appointment Request</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="navbar">
+    <div class="nav-container">
+    <h2 class="logo">MC Nathaniel Barbershop</h2>
+    <a href="#booking" class="nav-btn">Book Now</a>
+    </div>
+    </header>
+
+  <section class="hero">
+  <div class="hero-content">
+    <p class="brand">MC Nathaniel Barbershop</p>
+    <h1>Book your next fresh cut in seconds.</h1>
+    <p>
+      Clean fades, beard trims, and full grooming appointments made simple.
+      Pick your service, choose your preferred time, and send your request instantly.
+    </p>
+    <a href="#booking" class="btn">Book Appointment</a>
+  </div>
+</section>
+
+  <section class="services">
+    <h2>Our Services</h2>
+
+    <div class="services-grid">
+
+  <div class="service-card" onclick="scrollToBooking('Haircut')">
+    <h3>Haircut</h3>
+    <p>Classic cut with clean finish and styling.</p>
+    <span>From €15</span>
+  </div>
+
+  <div class="service-card" onclick="scrollToBooking('Skin Fade')">
+    <h3>Skin Fade</h3>
+    <p>Sharp fade with modern precision and detail.</p>
+    <span>From €18</span>
+  </div>
+
+  <div class="service-card" onclick="scrollToBooking('Beard Trim')">
+    <h3>Beard Trim</h3>
+    <p>Shape, line-up, and clean beard finish.</p>
+    <span>From €10</span>
+  </div>
+
+  <div class="service-card popular" onclick="scrollToBooking('Haircut + Beard')">
+    <div class="badge">Most Popular</div>
+    <h3>Haircut + Beard</h3>
+    <p>Full grooming combo for a fresh complete look.</p>
+    <span>From €25</span>
+  </div>
+
+  <div class="service-card" onclick="scrollToBooking('Kids Haircut')">
+    <h3>Kids Haircut</h3>
+    <p>Clean and comfortable cuts for kids.</p>
+    <span>From €12</span>
+  </div>
+
+  <div class="service-card" onclick="scrollToBooking('Full Grooming Package')">
+    <h3>Full Grooming Package</h3>
+    <p>Haircut, beard trim, and premium styling.</p>
+    <span>From €30</span>
+  </div>
+
+</div>
+  </section>
+
+  <section class="how-it-works">
+    <h2>How It Works</h2>
+
+    <div class="steps">
+      <div class="step">
+        <h3>1. Submit Request</h3>
+        <p>Choose your preferred service, date, and time.</p>
+      </div>
+
+      <div class="step">
+        <h3>2. We Check Availability</h3>
+        <p>Our team reviews your request and schedule.</p>
+      </div>
+
+      <div class="step">
+        <h3>3. We Confirm</h3>
+        <p>We contact you by phone or WhatsApp to confirm your appointment.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="booking" class="booking">
+    <h2>Request an Appointment</h2>
+    <p>
+      Choose your preferred service, date, and time. 
+      Our team will review your request and contact you to confirm your booking.
+    </p>
+    <h3 class="booking-brand">MC Nathaniel Barbershop</h3>
+    <form action="https://formspree.io/f/myklvygy" method="POST" class="booking-form">
+      <input type="hidden" name="_subject" value="New Booking Request - MC Nathaniel Barbershop">
+      <input type="hidden" name="_template" value="table">
+
+      <label>
+        Full Name
+        <input 
+          type="text" 
+          name="Customer Name" 
+          placeholder="Enter your full name" 
+          pattern="[A-Za-z\s]+" 
+          title="Only letters are allowed"
+          required
+        >
+      </label>
+
+      <label>
+        Phone Number
+        <input 
+          type="tel" 
+          name="Phone Number" 
+          placeholder="+356 99123456" 
+          pattern="[\+0-9\s]+" 
+          title="Enter a valid phone number"
+          required
+        >
+      </label>
+
+      <label>
+        Service
+        <select name="Service" id="serviceSelect" required>
+            <option value="">Select Service</option>
+            <option>Haircut</option>
+            <option>Skin Fade</option>
+            <option>Beard Trim</option>
+            <option>Haircut + Beard</option>
+            <option>Kids Haircut</option>
+            <option>Full Grooming Package</option>
+        </select>
+      </label>
+
+        <label>
+  Preferred Date
+  <input type="date" name="Preferred Date" id="dateInput" required>
+  <p id="day-display" class="day-display"></p>
+</label>
+        
+      <label>
+  Preferred Time
+  <select name="Preferred Time" id="timeInput" required>
+    <option value="">Select time</option>
+  </select>
+</label>
+
+      <button type="submit" class="btn">Submit Request</button>
+
+      <p class="note">
+        *This is a booking request. Your appointment is confirmed after we contact you.
+      </p>
+    </form>
+
+    <p id="success-message" style="display:none;">
+      ✅ Booking request sent! We’ll contact you shortly.
+    </p>
+
+    <a href="https://wa.me/3561234567" class="whatsapp-btn" target="_blank">
+      Message us on WhatsApp
+    </a>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 MC Nathaniel Barbershop. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

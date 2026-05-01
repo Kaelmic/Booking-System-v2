@@ -1,0 +1,358 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0b0b0b;
+  color: #f5f5f5;
+  overflow-x: hidden;
+}
+
+#booking {
+  scroll-margin-top: 80px;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #1f1f1f;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #c89b3c;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-btn {
+  background: #c89b3c;
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero {
+  min-height: 85vh;
+  padding: 100px 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.95)),
+    url("barber-bg.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero-content {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.brand {
+  color: #c89b3c;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.booking-brand {
+  text-align: center;
+  color: #c89b3c;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  color: #d4d4d4;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.btn {
+  display: inline-block;
+  background: #c89b3c;
+  color: #000000;
+  padding: 14px 26px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.btn:hover {
+  background: #e0b84f;
+  transform: translateY(-2px);
+}
+
+.services,
+.how-it-works {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.services h2,
+.how-it-works h2,
+.booking h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #f5f5f5;
+}
+
+.services-grid,
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.service-card,
+.step {
+  background: #141414;
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid #262626;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  text-align: left;
+}
+
+.service-card {
+  transition: 0.25s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #c89b3c, #e0b84f);
+  transition: left 0.3s ease;
+}
+
+.service-card:hover::before {
+  left: 0;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: #c89b3c;
+}
+
+.service-card h3,
+.step h3 {
+  margin-bottom: 10px;
+  color: #f5f5f5;
+}
+
+.service-card p,
+.step p {
+  color: #a3a3a3;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.service-card span {
+  font-weight: 700;
+  color: #c89b3c;
+  display: inline-block;
+}
+
+.service-card:hover h3 {
+  color: #c89b3c;
+}
+
+.popular {
+  border: 1px solid #c89b3c;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #c89b3c;
+  color: #000;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+.booking {
+  max-width: 700px;
+  width: calc(100% - 32px);
+  margin: 80px auto;
+  padding: 40px;
+  background: #141414;
+  border: 1px solid #262626;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+.booking h2 {
+  margin-bottom: 10px;
+}
+
+.booking p {
+  color: #a3a3a3;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.booking-form {
+  display: grid;
+  gap: 18px;
+  width: 100%;
+}
+
+.booking-form label {
+  display: grid;
+  gap: 8px;
+  width: 100%;
+  font-weight: 600;
+  color: #f5f5f5;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  display: block;
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #333333;
+  border-radius: 12px;
+  background: #0b0b0b;
+  color: #f5f5f5;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.booking-form input::placeholder,
+.booking-form textarea::placeholder {
+  color: #737373;
+}
+
+.booking-form input[type="date"],
+.booking-form input[type="time"] {
+  -webkit-appearance: none;
+  appearance: none;
+  min-height: 52px;
+  line-height: normal;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  outline: none;
+  border-color: #c89b3c;
+  box-shadow: 0 0 0 4px rgba(200, 155, 60, 0.15);
+}
+
+.booking-form button {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: #a3a3a3;
+  margin-top: -5px;
+  margin-bottom: 0;
+}
+
+.day-display {
+  font-size: 0.9rem;
+  color: #c89b3c;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+#success-message {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  background: rgba(34, 197, 94, 0.12);
+  color: #22c55e;
+  font-weight: 600;
+  border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+.whatsapp-btn {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  color: #22c55e;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.whatsapp-btn:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  text-align: center;
+  padding: 30px 20px;
+  color: #737373;
+  font-size: 0.9rem;
+  border-top: 1px solid #1f1f1f;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 75vh;
+    padding: 70px 20px;
+  }
+
+  .services,
+  .how-it-works {
+    margin: 60px auto;
+  }
+
+  .booking {
+    width: calc(100% - 32px);
+    margin: 40px auto;
+    padding: 24px;
+  }
+
+  .booking h2,
+  .services h2,
+  .how-it-works h2 {
+    font-size: 1.6rem;
+  }
+}
