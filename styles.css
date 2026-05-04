@@ -44,6 +44,7 @@ body {
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 1.2;
+  text-decoration: none;
 }
 
 .nav-btn {
@@ -420,7 +421,7 @@ body {
   .info-grid div:hover {
     transform: none;
   }
-  
+
   .booking h2,
 .services h2,
 .business-info h2,
