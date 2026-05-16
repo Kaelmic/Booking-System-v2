@@ -16,204 +16,271 @@
 <body>
   <header class="navbar">
     <div class="nav-container">
-      <a href="#" class="logo">MC Nathaniel Barbershop</a>
+      <a href="#" class="logo">
+        <span>MC Nathaniel</span>
+        <small>Barbershop</small>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#how">How It Works</a>
+        <a href="#booking">Book</a>
+      </nav>
+
       <a href="#booking" class="nav-btn">Book Now</a>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="hero-content">
-        <p class="brand">MC Nathaniel Barbershop</p>
-        <h1>Book your next fresh cut in seconds.</h1>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content reveal-load">
+        <p class="brand">Premium Grooming in Bugibba</p>
+
+        <h1>Fresh cuts. Sharp fades. Easy booking.</h1>
+
         <p>
-          Clean fades, beard trims, and full grooming appointments made simple.
-          Choose your service, preferred date, and time — we’ll contact you to confirm.
+          Request your haircut, beard trim, or full grooming appointment online.
+          Choose your service, date, and time — we’ll contact you to confirm.
         </p>
-        <a href="#booking" class="btn">Book Appointment</a>
+
+        <div class="hero-actions">
+          <a href="#booking" class="btn">Book Appointment</a>
+          <a href="#services" class="btn secondary-btn">View Services</a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <strong>6+</strong>
+            <span>Services</span>
+          </div>
+
+          <div>
+            <strong>9AM-8PM</strong>
+            <span>Mon - Sat</span>
+          </div>
+
+          <div>
+            <strong>Bugibba</strong>
+            <span>Malta</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card reveal-load">
+        <span class="status-dot"></span>
+        <p>Booking requests open today</p>
+        <h3>Get your next fresh cut sorted in under a minute.</h3>
+        <a href="#booking">Start Booking →</a>
       </div>
     </section>
 
-    <section class="services reveal" aria-labelledby="services-title">
-      <h2 id="services-title">Our Services</h2>
+    <section id="services" class="services reveal" aria-labelledby="services-title">
+      <div class="section-heading">
+        <p class="section-label">What We Offer</p>
+        <h2 id="services-title">Services built for a clean, confident look.</h2>
+      </div>
 
       <div class="services-grid">
         <button type="button" class="service-card" onclick="scrollToBooking('Haircut')">
+          <span class="service-number">01</span>
           <h3>Haircut</h3>
           <p>Classic cut with clean finish and styling.</p>
-          <span>From €15</span>
+          <strong>From €15</strong>
         </button>
 
         <button type="button" class="service-card" onclick="scrollToBooking('Skin Fade')">
+          <span class="service-number">02</span>
           <h3>Skin Fade</h3>
           <p>Sharp fade with modern precision and detail.</p>
-          <span>From €18</span>
+          <strong>From €18</strong>
         </button>
 
         <button type="button" class="service-card" onclick="scrollToBooking('Beard Trim')">
+          <span class="service-number">03</span>
           <h3>Beard Trim</h3>
           <p>Shape, line-up, and clean beard finish.</p>
-          <span>From €10</span>
+          <strong>From €10</strong>
         </button>
 
         <button type="button" class="service-card popular" onclick="scrollToBooking('Haircut + Beard')">
           <div class="badge">Most Popular</div>
+          <span class="service-number">04</span>
           <h3>Haircut + Beard</h3>
           <p>Full grooming combo for a fresh complete look.</p>
-          <span>From €25</span>
+          <strong>From €25</strong>
         </button>
 
         <button type="button" class="service-card" onclick="scrollToBooking('Kids Haircut')">
+          <span class="service-number">05</span>
           <h3>Kids Haircut</h3>
           <p>Clean and comfortable cuts for kids.</p>
-          <span>From €12</span>
+          <strong>From €12</strong>
         </button>
 
         <button type="button" class="service-card" onclick="scrollToBooking('Full Grooming Package')">
+          <span class="service-number">06</span>
           <h3>Full Grooming Package</h3>
           <p>Haircut, beard trim, and premium styling.</p>
-          <span>From €30</span>
+          <strong>From €30</strong>
         </button>
       </div>
     </section>
 
     <section class="business-info reveal">
-      <h2>Visit Us</h2>
-      <div class="info-grid">
-        <div>
-          <h3>Location</h3>
-          <p>Bugibba, Malta</p>
-        </div>
+      <div class="info-card">
+        <h2>Visit Us</h2>
 
-        <div>
-          <h3>Opening Hours</h3>
-          <p>Monday - Saturday: 9:00 AM - 8:00 PM</p>
-          <p>Sunday: Closed</p>
-        </div>
+        <div class="info-grid">
+          <div>
+            <span>Location</span>
+            <p>Bugibba, Malta</p>
+          </div>
 
-        <div>
-          <h3>Contact</h3>
-          <p>Phone / WhatsApp: +356 9912 3456</p>
+          <div>
+            <span>Opening Hours</span>
+            <p>Monday - Saturday: 9:00 AM - 8:00 PM</p>
+            <p>Sunday: Closed</p>
+          </div>
+
+          <div>
+            <span>Contact</span>
+            <p>Phone / WhatsApp: +356 9912 3456</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="how-it-works reveal">
-      <h2>How It Works</h2>
+    <section id="how" class="how-it-works reveal">
+      <div class="section-heading">
+        <p class="section-label">Simple Process</p>
+        <h2>How booking works</h2>
+      </div>
 
       <div class="steps">
         <div class="step">
-          <h3>1. Submit Request</h3>
+          <span>01</span>
+          <h3>Submit Request</h3>
           <p>Choose your preferred service, date, and time.</p>
         </div>
 
         <div class="step">
-          <h3>2. We Check Availability</h3>
+          <span>02</span>
+          <h3>We Check Availability</h3>
           <p>Our team reviews your request and schedule.</p>
         </div>
 
         <div class="step">
-          <h3>3. We Confirm</h3>
+          <span>03</span>
+          <h3>We Confirm</h3>
           <p>We contact you by phone or WhatsApp to confirm your appointment.</p>
         </div>
       </div>
     </section>
 
     <section id="booking" class="booking reveal">
-      <h2>Request an Appointment</h2>
-      <p>
-        Choose your preferred service, date, and time.
-        Our team will review your request and contact you to confirm your booking.
-      </p>
-
-      <h3 class="booking-brand">MC Nathaniel Barbershop</h3>
-
-      <form action="https://formspree.io/f/myklvygy" method="POST" class="booking-form">
-        <input type="hidden" name="_subject" value="New Booking Request - MC Nathaniel Barbershop">
-        <input type="hidden" name="_template" value="table">
-
-        <label>
-          Full Name
-          <input 
-            type="text" 
-            name="Customer Name" 
-            placeholder="Enter your full name" 
-            pattern="[A-Za-z\s]+" 
-            title="Only letters are allowed"
-            required
-          >
-        </label>
-
-        <label>
-          Phone Number
-          <input 
-            type="tel" 
-            name="Phone Number" 
-            placeholder="+356 9912 3456" 
-            pattern="[\+0-9\s]+" 
-            title="Enter a valid phone number"
-            required
-          >
-        </label>
-
-        <label>
-          Email Address
-          <input 
-            type="email" 
-            name="Email Address" 
-            placeholder="you@example.com"
-          >
-        </label>
-
-        <label>
-          Service
-          <select name="Service" id="serviceSelect" required>
-            <option value="">Select Service</option>
-            <option>Haircut</option>
-            <option>Skin Fade</option>
-            <option>Beard Trim</option>
-            <option>Haircut + Beard</option>
-            <option>Kids Haircut</option>
-            <option>Full Grooming Package</option>
-          </select>
-        </label>
-
-        <label>
-          Preferred Date
-          <input type="date" name="Preferred Date" id="dateInput" required>
-          <p id="day-display" class="day-display"></p>
-        </label>
-
-        <label>
-          Preferred Time
-          <select name="Preferred Time" id="timeInput" required>
-            <option value="">Select time</option>
-          </select>
-        </label>
-
-        <label>
-          Notes / Special Request
-          <textarea 
-            name="Notes" 
-            placeholder="Example: low fade, beard line-up, specific barber request, etc."
-            rows="4"
-          ></textarea>
-        </label>
-
-        <button type="submit" class="btn">Submit Request</button>
-
-        <p class="note">
-          *This is a booking request. Your appointment is confirmed only after we contact you.
+      <div class="booking-left">
+        <p class="section-label">Book Online</p>
+        <h2>Request an Appointment</h2>
+        <p>
+          Choose your preferred service, date, and time.
+          Our team will review your request and contact you to confirm your booking.
         </p>
-      </form>
 
-      <p id="success-message" class="success-message" style="display:none;">
-        ✅ Booking request sent! We’ll contact you shortly.
-      </p>
+        <div class="booking-highlight">
+          <h3>MC Nathaniel Barbershop</h3>
+          <p>Clean fades, beard trims, and full grooming appointments made simple.</p>
+        </div>
 
-      <a href="https://wa.me/35699123456" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
-        Message us on WhatsApp
-      </a>
+        <a href="https://wa.me/35699123456" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+          Message us on WhatsApp
+        </a>
+      </div>
+
+      <div class="booking-card">
+        <form action="https://formspree.io/f/myklvygy" method="POST" class="booking-form">
+          <input type="hidden" name="_subject" value="New Booking Request - MC Nathaniel Barbershop">
+
+          <label>
+            Full Name
+            <input 
+              type="text" 
+              name="Customer Name" 
+              placeholder="Enter your full name" 
+              pattern="[A-Za-z\s]+" 
+              title="Only letters are allowed"
+              required
+            >
+          </label>
+
+          <label>
+            Phone Number
+            <input 
+              type="tel" 
+              name="Phone Number" 
+              placeholder="+356 9912 3456" 
+              pattern="[\+0-9\s]+" 
+              title="Enter a valid phone number"
+              required
+            >
+          </label>
+
+          <label>
+            Email Address
+            <input 
+              type="email" 
+              name="Email Address" 
+              placeholder="you@example.com"
+            >
+          </label>
+
+          <label>
+            Service
+            <select name="Service" id="serviceSelect" required>
+              <option value="">Select Service</option>
+              <option>Haircut</option>
+              <option>Skin Fade</option>
+              <option>Beard Trim</option>
+              <option>Haircut + Beard</option>
+              <option>Kids Haircut</option>
+              <option>Full Grooming Package</option>
+            </select>
+          </label>
+
+          <label>
+            Preferred Date
+            <input type="date" name="Preferred Date" id="dateInput" required>
+            <p id="day-display" class="day-display"></p>
+          </label>
+
+          <label>
+            Preferred Time
+            <select name="Preferred Time" id="timeInput" required>
+              <option value="">Select time</option>
+            </select>
+          </label>
+
+          <label class="full-width">
+            Notes / Special Request
+            <textarea 
+              name="Notes" 
+              placeholder="Example: low fade, beard line-up, specific barber request, etc."
+              rows="4"
+            ></textarea>
+          </label>
+
+          <button type="submit" class="btn full-width">Submit Request</button>
+
+          <p class="note full-width">
+            *This is a booking request. Your appointment is confirmed only after we contact you.
+          </p>
+        </form>
+
+        <p id="success-message" class="success-message" style="display:none;">
+          ✅ Booking request sent! We’ll contact you shortly.
+        </p>
+      </div>
     </section>
   </main>
 
